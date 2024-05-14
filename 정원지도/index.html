@@ -1,28 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Garden Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js">
+    </script>
 </head>
 <body>
-<div class="calendar">
-  <div class="header">
-    <button id="prevBtn">&lt;</button>
-    <h2 id="monthYear"></h2>
-    <button id="nextBtn">&gt;</button>
-  </div>
-  <div class="days"></div>
-  <div class="event-form">
-    <h3>일정추가</h3>
-    <form id="eventForm">
-      <label for="eventName">일정명</label>
-      <input type="text" id="eventName" required>
-      <label for="eventStartDate">시작일:</label>
-      <input type="date" id="eventStartDate" required>
-      <label for="eventEndDate">종료일:</label>
-      <input type="date" id="eventEndDate" required>
-      <label for="eventColor">표시색상:</label>
-      <input type="color" id="eventColor" value="#7bed9f" required>
-      <button type="submit">확인</button>
+    <h1>Vegetable Garden Planner</h1>
+    <form id="gardenForm">
+        <label for="width">Width (m):</label>
+        <input type="number" id="width" name="width" required min="1">
+        <label for="height">Height (m):</label>
+        <input type="number" id="height" name="height" required min="1">
+        <button type="submit">Generate Garden</button>
     </form>
-  </div>
-</div>
+    <div id="gardenGrid" class="grid-container"></div>
+
+    
 </body>
+</html>
