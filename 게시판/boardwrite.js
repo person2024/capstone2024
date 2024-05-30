@@ -5,7 +5,7 @@ function Post() {
         var post = { title: title, content: content, comments: [] };
         var posts = JSON.parse(localStorage.getItem("posts")) || [];
         posts.push(post);
-        localStorage.setItem("posts", JSON.stringify(posts)); // Corrected here
+        localStorage.setItem("posts", JSON.stringify(posts));
         displayPosts();
         document.getElementById("posttitle").value = "";
         document.getElementById("postcontent").value = "";
@@ -35,10 +35,10 @@ function displayPosts() {
     });
 }
 
-function displayComments(comments) { // Removed unnecessary parameter postIndex
-    var commentsHTML = ""; // Removed unnecessary length
+function displayComments(comments) { 
+    var commentsHTML = ""; 
     comments.forEach(function (comment) {
-        commentsHTML += `<p>${comment}</p>`; // Corrected here
+        commentsHTML += `<p>${comment}</p>`; 
     });
     return commentsHTML;
 }
