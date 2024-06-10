@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원탈퇴</title>
+</head>
+<body>
+    <h1>회원탈퇴/</h1>
+    <form id="quit-form">
+      <select name="quit">
+      <h1>회원님, 헤어지기 싫어요. ㅠ <br> 왜 플루랄라를 탈퇴하시려고 하나요?</h1>
+	    <option value="information">정보가 너무 없어요.</option>
+	    <option value="notcare">식물을 키우지 않게 되었어요.</option>
+  	  <option value="another web">다른 웹을 이용하고 싶어서요.</option>
+    기타사유 : <input id='othr' type='other reason'/>
+</form>
+
+</form>
+    </select>
+    </form>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value;
+            
+            const response = await fetch('/api/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password, email })
+            });
+            
+            if (response.ok) {
+                alert('안녕히 가세요.');
+                // 회원가입이 성공하면 입력된 값들을 초기화
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+                document.getElementById('email').value = '';
+
+                // 이전 페이지로 이동
+                window.location.href = document.referrer;
+            } else {
+                alert('남아주셔서 감사합니다.');
+            }
+        });
+    </script>
+</body>
+</html>
