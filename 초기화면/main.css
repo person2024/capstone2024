@@ -1,1 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+}
 
+header {
+    background-color: #4CAF50;
+    padding: 5px 0; /* Reduce padding to make the green box smaller */
+    text-align: center;
+    color: white;
+    position: relative; /* Add position relative to use absolute positioning for login/signup */
+}
+
+nav {
+    margin: 5px 0; /* Adjust margin to further control the size */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav ul li {
+    margin: 0 10px; /* Adjust margin between menu items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 8px; /* Adjust padding within each menu item to control its size */
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+}
+
+nav ul li.right {
+    margin-left: 10px; /* Push login/signup to the right */
+}
+
+nav ul li.right a {
+    margin-left: auto; /* Space between login and signup */
+}
+
+.container {
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+#footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.user-menu {
+    float: right;
+    margin-left: 0; /* Remove margin to eliminate space between menus */
+}
+
+.user-menu ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.user-menu ul.menu li {
+    float: left;
+}
+
+.user-menu ul.menu li.right {
+    float: right;
+}
+
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* 텍스트 색상 */
+}
+
+.menu li a:hover {
+    background-color: #ddd; /* 호버 시 배경색 */
+}
+
+#section {
+    text-align: center; /* Center align the text within the section */
+    margin: 20px 0; /* Add some margin for better spacing */
+}
+
+#section p {
+    margin: 0; /* Remove default margin */
+}
